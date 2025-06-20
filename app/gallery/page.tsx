@@ -1,29 +1,58 @@
-import Link from "next/link"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import Link from "next/link";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 const photos = [
-  { id: 1, title: "Mountain Landscape", description: "Beautiful mountain view at sunset" },
-  { id: 2, title: "Ocean Waves", description: "Peaceful ocean waves on the shore" },
-  { id: 3, title: "Forest Path", description: "Winding path through a dense forest" },
+  {
+    id: 1,
+    title: "Mountain Landscape",
+    description: "Beautiful mountain view at sunset",
+  },
+  {
+    id: 2,
+    title: "Ocean Waves",
+    description: "Peaceful ocean waves on the shore",
+  },
+  {
+    id: 3,
+    title: "Forest Path",
+    description: "Winding path through a dense forest",
+  },
   { id: 4, title: "City Skyline", description: "Modern city skyline at night" },
-  { id: 5, title: "Desert Dunes", description: "Golden sand dunes in the desert" },
-  { id: 6, title: "Lake Reflection", description: "Perfect reflection on a calm lake" },
-]
+  {
+    id: 5,
+    title: "Desert Dunes",
+    description: "Golden sand dunes in the desert",
+  },
+  {
+    id: 6,
+    title: "Lake Reflection",
+    description: "Perfect reflection on a calm lake",
+  },
+];
 
 export default function GalleryPage() {
   return (
     <div className="space-y-8">
       <div className="text-center space-y-4">
         <h1 className="text-4xl font-bold">Photo Gallery</h1>
-        <p className="text-xl text-muted-foreground">Intercepting Routes Example - Click photos to view in modal</p>
+        <p className="text-xl text-muted-foreground">
+          Intercepting Routes Example - Click photos to view in modal
+        </p>
       </div>
 
       <Card>
         <CardHeader>
           <CardTitle>Intercepting Routes</CardTitle>
           <CardDescription>
-            Photos open in a modal when navigated from this page, but show full page when accessed directly
+            Photos open in a modal when navigated from this page, but show full
+            page when accessed directly
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -62,5 +91,5 @@ export default function GalleryPage() {
         ))}
       </div>
     </div>
-  )
+  );
 }
